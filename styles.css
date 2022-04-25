@@ -3,18 +3,360 @@
     --bg-colour: #162831;
     --font-colour: #ffffff;
     --accent-colour: #018ABE;
+    --scnd-font: 'El Messiri', sans-serif;
 }
 /* --------------------RESSET STYLES---------- */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
 
+ul,
+ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* прибираю картинкам відступ знизу */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
 
 /* --------------------UTILIIT STYLES----------- */
+body {
+    font-family: 'Roboto', sans-serif;    
+    color: var(--font-colour);
+    background-color: var(--bg-colour);
+}
 
+.container {
+    max-width: 1344px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    /* outline: red solid 2px; */
+}
+.container-large {
+    max-width: 1736px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    /* outline: red solid 2px; */
+}
+.container-small {
+    max-width: 1076px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    /* outline: red solid 2px; */
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'El Messiri';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.40;
+    text-align: center;
+
+    padding-top: 150px;
+}
+
+.icon::before,
+.icon::after {
+    content: '';
+    display: block;
+    height: 14px;
+    width: 28px;
+    background-color: var(--accent-colour);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon::before{
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-right: 66px;
+}
+.icon::after {
+    margin-left: 66px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
 
 /* --------------------HEADER--------- */
-/* --------------------HERO------ */
+
+.header-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+}
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+.header-btn {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.40;
+
+    color: var(--scnd-font);
+    background-color: var(--accent-colour);
+    border-radius: 3px;
+    border-width: 0;
+    box-shadow: 7px 8px 30px -9px rgba(66, 68, 90, 1);
+
+    padding: 9px 15px;
+}
+.header-btn:hover {
+    box-shadow: none;
+}
+.header-btn:active {
+    box-shadow: inset 7px 8px 30px -9px rgba(66, 68, 90, 1);
+}
+/* --------------------HEAD------ */
+
+.head {
+    padding-top: 136px;
+    padding-bottom: 210px;
+
+    width: 1296px;
+    height: 600px;
+
+    background-image: 
+    linear-gradient(0deg, rgba(152, 201, 220, 0.5) 0%, rgba(152, 201, 220, 0.5) 100%),
+    url(./images/unsplash_S-llxYh3GzI.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    border-radius: 10px;
+}
+
+.head-pretitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 40px;
+    border-radius: 3px;
+
+    font-family: 'El Messiri';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.40;
+    text-align: center;
+}
+
+.head-pretitle::before,
+.head-pretitle::after {
+    
+    content: '';
+    display: block;
+    height: 14px;
+    width: 28px;
+    background-color: var(--font-colour);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.head-pretitle::before {
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-right: 66px;
+}
+.head-pretitle::after {
+    margin-left: 66px;
+    border-top-left-radius: 50px;   
+    border-bottom-right-radius: 50px;
+}
+
+
+.head-title {
+    width: 588px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'El Messiri';
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.40;
+    text-align: center;
+}
 /* --------------------SESSIONS------------ */
+
+
 /* --------------------REVIEWS------------- */
+
+.reviewer-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reviewer-item {
+    position: relative;
+    max-width: 500px;
+    width:30%;
+
+    background-color: var(--accent-colour);
+
+    padding: 40px 45px;
+    margin-top: 137px;
+    margin-bottom: 97px;
+    border-radius: 10px;
+
+}
+.reviewer-item::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: #162831;
+    opacity: 40%;
+}
+.reviewer-item:focus::before{
+    opacity: 0%;
+}
+
+.reviewer-item:focus {
+    transform: scale(1.2, 1.2);
+}
+
+.active-reviewe {
+    padding: 50px 60px;
+}
+
+.reviewer-name {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.40;
+    margin-bottom: 20px;
+}
+
+.review-text-positive,
+.review-text-negative {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.40;
+}
+.review-text-positive {
+    margin-bottom: 20px;
+}
+.swipebar {
+    display: flex;
+    justify-content: center;
+}
+.squere {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: var(--font-colour);
+    opacity: 0.4;
+}
+.active-squere {
+    opacity: 1;
+}
+.squere:not(:last-child) {
+    margin-right: 16px;
+}
 /* --------------------ABOUT US---------------- */
+.about-us-title.section-title {
+    margin-bottom: 100px;
+}
+.servise-type {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0;
+}
+.servise-type:not(:last-child) {
+    margin-bottom: 100px;
+}
+
+.splash-picture{
+    width: 526px;
+    height: 100%;
+    border-radius: 12px;
+}
+.servise-type.servise-type:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+.servise-description {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.40;
+}
+.servise-description > p {
+    width: 466px;
+    margin-top: 10px;
+}
+.service-description > h3 {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+}
+.under-picture {
+    position: absolute;
+
+    width: 526px;
+    border-radius: 12px;
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in;
+}
+.massage {
+    right: 0;
+    top: 0;
+}
+.hidroterapy {
+    left: 0;
+    bottom: 0;
+}
+
+.under-picture:hover,
+.under-picture:focus {
+    opacity: 1;
+}
 /* --------------------PRICES------------------ */
 /* --------------------CONTACTS-------------- */
 
