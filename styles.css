@@ -32,6 +32,7 @@ img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 13.5px;
 }
 
 a {
@@ -79,10 +80,12 @@ body {
     text-align: center;
 
     padding-top: 150px;
+    margin-bottom: 100px;
 }
 
 .icon::before,
-.icon::after {
+.icon::after,
+.service-item::before {
     content: '';
     display: block;
     height: 14px;
@@ -92,7 +95,8 @@ body {
     background-position: center;
 }
 
-.icon::before{
+.icon::before,
+.service-item::before {
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     margin-right: 66px;
@@ -209,10 +213,50 @@ body {
     text-align: center;
 }
 /* --------------------SESSIONS------------ */
+.grid-container {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 12px;
+    column-gap: 12px;
+}
+.grid-items {
+    position: relative;
+}
+.grid-items:hover::before,
+.grid-items:focus::before {
+    position: absolute;
+    bottom: 0;
 
+    content: "";
+    width: 100%;
+    height: 12px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-color: #018ABE;
+}
+.grid-img-overlay {
+    border-radius: 12px;
+}
+.grid-items.first {
+    grid-row: span 2; 
+}
+.session-descr {
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+
+    font-family: 'El Messiri';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+}
 
 /* --------------------REVIEWS------------- */
-
+.reviews-title {
+    margin-bottom: 137px;
+}
 .reviewer-list {
     display: flex;
     justify-content: space-around;
@@ -226,7 +270,7 @@ body {
     background-color: var(--accent-colour);
 
     padding: 40px 45px;
-    margin-top: 137px;
+    /* margin-top: 137px; */
     margin-bottom: 97px;
     border-radius: 10px;
 
@@ -290,9 +334,6 @@ body {
     margin-right: 16px;
 }
 /* --------------------ABOUT US---------------- */
-.about-us-title.section-title {
-    margin-bottom: 100px;
-}
 .servise-type {
     position: relative;
 
@@ -311,7 +352,7 @@ body {
     height: 100%;
     border-radius: 12px;
 }
-.servise-type.servise-type:nth-child(2n) {
+.servise-type:nth-child(2n) {
     flex-direction: row-reverse;
 }
 .servise-description {
@@ -327,11 +368,13 @@ body {
     width: 466px;
     margin-top: 10px;
 }
-.service-description > h3 {
+.description-title {
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 24px;
     line-height: 1.4;
+
+    margin-bottom: 30px;
 }
 .under-picture {
     position: absolute;
@@ -358,6 +401,50 @@ body {
     opacity: 1;
 }
 /* --------------------PRICES------------------ */
+.prices-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price-list {
+    flex-basis: calc((100% - 134px) / 2);
+}
+.service-item {
+    display: flex;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+
+    margin-bottom: 30px;
+}
+.service-item::before {
+    margin-right: 20px;
+}
+.service-price {
+    font-family: 'El Messiri';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+
+    margin-left: auto;
+}
+
+.giftcard-box {
+    flex-basis: calc((100% - 134px) / 2);
+}
+
+.giftcard-text {
+    font-family: 'El Messiri';
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.4;
+    text-align: center;
+
+    margin-top: 30px;
+}
+
 /* --------------------CONTACTS-------------- */
 
 /* --------------------FOOTER------------ */
