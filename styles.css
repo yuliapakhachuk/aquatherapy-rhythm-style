@@ -129,14 +129,54 @@ body {
     font-size: 14px;
     line-height: 1.35;
 }
+/* NOT working changing color or logo
+ during hover/focus */
+ 
+/* .logo-header-link:hover,
+.logo-header-link:focus {
+    fill: var(--accent-colour);
+}
+.logo-icon:hover,
+.logo-icon:focus {
+    fill: inherit;
+} */
+
 .nav-list {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+.nav-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in;
+}
+
+.nav-item:hover,
+.nav-item:focus {
+    color: var(--accent-colour);
+}
 .nav-item:not(:last-child) {
     margin-right: 50px;
 }
+.nav-ancor {
+    color: var(--font-colour);
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in;
+}
+.nav-ancor:hover,
+.nav-ancor:focus {
+    color: var(--accent-colour);
+}
+
 .header-btn {
     color: var(--scnd-font);
     background-color: var(--accent-colour);
@@ -215,7 +255,6 @@ body {
 }
 /* --------------------SESSIONS------------ */
 .grid-container {
-    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -240,6 +279,19 @@ body {
 .grid-img-overlay {
     border-radius: 12px;
 }
+.grid-img-underlay {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in;
+}
+.grid-items:focus > .grid-img-underlay {
+    opacity: 1;
+}
+
 .grid-items.first {
     grid-row: span 2; 
 }
@@ -449,6 +501,7 @@ body {
 /* --------------------CONTACTS-------------- */
 .contacts {
     display: flex;
+    justify-content: space-between;
 
     padding-top: 150px;
     padding-bottom: 90px;
@@ -480,8 +533,12 @@ body {
 
     margin-bottom: 20px;
 }
+.contact-center-item {
+    display: flex;
+    align-items: center;
+}
 .contact-center-item:not(:last-child) {
-    margin-bottom: 22px;
+    margin-bottom: 19px;
 }
 .contact-center-item:last-child {
     margin-bottom: 30px;

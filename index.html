@@ -18,17 +18,33 @@
 <body>
     <header class="header">
         <div class="container header-box">
-            <a class="logo-header-link" href="">
+            <a class="logo-header-link" href="./index.html">
                 <svg class="logo-icon" heigth="60" width="60">
                     <use href="./images/icons.svg#icon-logo"></use>
                 </svg>
             </a>
             <nav class="header-nav">
                 <ul class="nav-list">
-                    <li class="nav-item">Главная</li>
-                    <li class="nav-item">Сеансы</li>
-                    <li class="nav-item">Отзывы</li>
-                    <li class="nav-item">Контакты</li>
+                    <li class="nav-item">
+                        <a href="#main" class="nav-ancor">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sessions" class="nav-ancor">
+                            Сеансы
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#rewievs" class="nav-ancor">
+                            Отзывы
+                        </a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a href="#contacts" class="nav-ancor"> 
+                            Контакты 
+                        </a>
+                    </li>
                     <li class="nav-item">Новости</li>
                     <li class="nav-item">Обо мне</li>
                     <li class="nav-item">Блог</li>
@@ -39,41 +55,47 @@
     </header>
     <main>
 <!-- ----------HEAD---------- -->
-        <section class="head container">
+        <section class="head container" id="main">
                 <p class="head-pretitle">Укрепление здоровья</p>
                 <h1 class="head-title">Акватерапия RitmStyle</h1>
         </section>
 <!-- ----------SESSIONS-------------- -->
-        <section class="sessions container">
-            <h2 class="session-title section-title icon">Сеансы RitmStyle</h2>
+        <section class="sessions container" >
+            <h2 class="session-title section-title icon" id="sessions">Сеансы RitmStyle</h2>
             <div class="grid-container">
-                <div class="grid-items first">
+                <div class="grid-items first" tabindex="0">
                     <img src="./images/session-large@1x.jpg" alt="девушка плывет под водой" class="grid-img-overlay">
+                    <img src="./images/underlay-big.jpg" alt="две девушки в бассейне держаться за руки" class="grid-img-underlay" >
+
                     <span class="session-descr"> Стандартный RitmStyle</span>
                 </div>
-                <div class="grid-items">
+                <div class="grid-items" tabindex="0">
                     <img src="./images/sessoin-small@1x.jpg" alt="девушка плывет под водой" class="grid-img-overlay">
+                    <img src="./images/underlay-small.jpg" alt="две девушки в бассейне держаться за руки" class="grid-img-underlay">
                     <span class="session-descr"> RitmStyle для пар</span>
                 </div>
-                <div class="grid-items">
+                <div class="grid-items" tabindex="0">
                     <img src="./images/sessoin-small@1x.jpg" alt="девушка плывет под водой" class="grid-img-overlay">
+                    <img src="./images/underlay-small.jpg" alt="две девушки в бассейне держаться за руки" class="grid-img-underlay">
                     <span class="session-descr"> RitmStyle с полным <br> погружением под воду</span>
                 </div>
-                <div class="grid-items">
+                <div class="grid-items" tabindex="0">
                     <img src="./images/sessoin-small@1x.jpg" alt="девушка плывет под водой" class="grid-img-overlay">
+                    <img src="./images/underlay-small.jpg" alt="две девушки в бассейне держаться за руки" class="grid-img-underlay">
                     <span class="session-descr"> RitmStyle для беременных</span>
                 </div>
-                <div class="grid-items">
+                <div class="grid-items" tabindex="0">
                     <img src="./images/sessoin-small@1x.jpg" alt="девушка плывет под водой" class="grid-img-overlay">
+                    <img src="./images/underlay-small.jpg" alt="две девушки в бассейне держаться за руки" class="grid-img-underlay">
                     <span class="session-descr"> RitmStyle + красочная <br> подводная фотосессия</span>
                 </div>
             </div>
         </section>
 <!-- ----------REVIEWS------------------- -->
-        <section class="reviews container-large">
-            <h2 class="reviews-title section-title icon">Отзывы</h2>
-            <ul class="reviewer-list">
-                <li class="reviewer-item" tabindex="0">
+        <section class="reviews container-large" >
+            <h2 class="reviews-title section-title icon" id="rewievs">Отзывы</h2>
+            <div class="reviewer-list">
+                <div class="reviewer-item" tabindex="0">
                     <p class="reviewer-name">Александра Дмитриева</p>
                     <p class="review-text-positive">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur nulla viverra egestas tellus. Cursus scelerisque
                     phasellus netus proin. Etiam mauris maecenas facilisis faucibus mauris eleifend purus. Purus dictum vulputate elementum
@@ -83,8 +105,8 @@
                     fermentum viverra bibendum faucibus urna. Arcu, ut sed tellus lacus quisque diam. Semper sed aenean in etiam mus
                     praesent diam semper in. Pretium id a amet, massa ligula nibh faucibus ornare. Ut aenean rhoncus sed nam ut diam
                     dapibus. Risus nibh faucibus eu vestibulum tempor, quis ultrices mauris. Porta enim, donec odio sagittis, eget velit at.</p>
-                </li>
-                <li class="reviewer-item active-reviewe" tabindex="0">
+                </div>
+                <div class="reviewer-item active-reviewe" tabindex="0">
                     <p class="reviewer-name">Кира Иванова</p>
                     <p class="review-text-positive">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus diam risus morbi nulla dictum. Urna mi orci gravida
                     placerat amet, eu, aliquet facilisis aliquet. Dolor praesent nam ornare fringilla enim nibh donec sit imperdiet. Amet,
@@ -94,8 +116,8 @@
                     sed phasellus aliquam nulla non aenean. Quisque id nunc, mauris potenti a massa. Fermentum at elit, convallis leo dolor
                     aliquet id elementum. Ullamcorper sociis et cum bibendum in egestas. Diam, urna, sed tempus mollis aliquam elit.
                     Facilisi nam nulla pulvinar mauris vel lacinia venenatis.</p>
-                </li>
-                <li class="reviewer-item" tabindex="0">
+                </div>
+                <div class="reviewer-item" tabindex="0">
                     <p class="reviewer-name">Яна Жернова</p>
                     <p class="review-text-positive">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia eget mattis orci aliquam enim tincidunt gravida aliquet
                     ut. Ipsum vulputate morbi felis, lobortis tincidunt. Pretium dictum odio feugiat auctor diam sit viverra gravida.
@@ -106,8 +128,8 @@
                     <p class="review-text-negative">Tortor fermentum orci neque sed. Mauris faucibus diam lorem erat ullamcorper donec egestas neque. Maecenas malesuada
                     mauris magnis sed id. Luctus vitae justo, in consectetur arcu. Nulla feugiat at eu in aliquet. Diam nunc, libero mauris
                     tellus suspendisse morbi sagittis semper.</p>
-                </li>
-            </ul>
+                </div>
+            </div>
             <div class="swipebar">
                 <div class="squere active-squere"></div>
                 <div class="squere"></div>
@@ -210,7 +232,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
-            <div class="contact-box">
+            <div class="contact-box" id="contacts">
                 <div class="contact-card">
                     <h4 class="contact-center">Бассейн WorkClass</h4>
                     <ul class="contact-center-list">
@@ -262,6 +284,8 @@
             </div>
         </section>
     </main>
+<!-- -----------FOOTER--------------- -->
+
     <footer class="container" >
         <p class="footer-fext">
             <span>© 2018-2022 RitmStyle</span> 
