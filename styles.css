@@ -106,6 +106,16 @@ body {
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
+.btn {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.40;
+    border-radius: 3px;
+    border-width: 0;
+    box-shadow: 7px 8px 30px -9px rgba(66, 68, 90, 1);
+    
+    padding: 9px 15px;
+}
 
 /* --------------------HEADER--------- */
 
@@ -128,17 +138,8 @@ body {
     margin-right: 50px;
 }
 .header-btn {
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 1.40;
-
     color: var(--scnd-font);
     background-color: var(--accent-colour);
-    border-radius: 3px;
-    border-width: 0;
-    box-shadow: 7px 8px 30px -9px rgba(66, 68, 90, 1);
-
-    padding: 9px 15px;
 }
 .header-btn:hover {
     box-shadow: none;
@@ -446,7 +447,74 @@ body {
 }
 
 /* --------------------CONTACTS-------------- */
+.contacts {
+    display: flex;
 
+    padding-top: 150px;
+    padding-bottom: 90px;
+}
+.aqua-video {
+    border-radius: 12px;
+    max-width: 856px;
+    margin-right: 48px;
+}
+.contact-card {
+    width: 392px;
+    border-radius: 12px;
+    background-color: var(--accent-colour);
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+
+    padding:35px 45px;
+}
+.contact-card:not(:last-child) {
+    margin-bottom: 24px;
+}
+.contact-center {
+    font-family: 'El Messiri';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+
+    margin-bottom: 20px;
+}
+.contact-center-item:not(:last-child) {
+    margin-bottom: 22px;
+}
+.contact-center-item:last-child {
+    margin-bottom: 30px;
+}
+
+.icon-location,
+.icon-shadle {
+    width: 20px;
+    height: 20px;
+
+    margin-right: 20px;
+}
+.icon-undr-ground {
+    width: 20px;
+    height: 16px;
+
+    margin-right: 20px;
+}
+.booking-time-btn {
+    color: var(--accent-colour);
+    background-color: var(--font-colour);}
 /* --------------------FOOTER------------ */
+.footer-fext {
+    display: flex;
+    justify-content: space-between;
 
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 135%;
+
+    padding-bottom: 30px;
+}
+.made-in {
+    font-weight: 700;
+}
 
