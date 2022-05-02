@@ -116,6 +116,24 @@ body {
     
     padding: 9px 15px;
 }
+/* --------------------ANIMATIONS--------- */
+@keyframes changeFontColor {
+    0% {
+        color: var(--font-colour);
+    }
+    25% {
+        color: rgb(204, 204, 152);
+    }
+    60% {
+        color: rgb(152, 204, 204);
+    }
+    90% {
+        color: rgb(215, 236, 236);
+    }
+    100% {
+        color: #ffffff;
+    }
+}
 
 /* --------------------HEADER--------- */
 
@@ -129,17 +147,16 @@ body {
     font-size: 14px;
     line-height: 1.35;
 }
-/* NOT working changing color or logo
- during hover/focus */
- 
-/* .logo-header-link:hover,
-.logo-header-link:focus {
-    fill: var(--accent-colour);
+.logo-icon {
+    fill: var(--font-colour);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in;
 }
 .logo-icon:hover,
 .logo-icon:focus {
-    fill: inherit;
-} */
+    fill: var(--accent-colour);
+}
 
 .nav-list {
     display: flex;
@@ -162,7 +179,7 @@ body {
 .nav-item:not(:last-child) {
     margin-right: 50px;
 }
-.nav-ancor {
+.nav-link {
     color: var(--font-colour);
 
     padding-top: 20px;
@@ -172,21 +189,26 @@ body {
     transition-duration: 250ms;
     transition-timing-function: ease-in;
 }
-.nav-ancor:hover,
-.nav-ancor:focus {
+.nav-link:hover,
+.nav-link:focus {
     color: var(--accent-colour);
 }
 
 .header-btn {
-    color: var(--scnd-font);
+    color: var(--font-colour);
     background-color: var(--accent-colour);
+
+    transition-property: color, background-color;
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease-in, ease-in;
 }
 .header-btn:hover {
     box-shadow: none;
 }
 .header-btn:active {
-    box-shadow: inset 7px 8px 30px -9px rgba(66, 68, 90, 1);
-}
+    color: var(--accent-colour);
+    background-color: var(--font-colour);
+    box-shadow: inset 11px 12px 30px -16px rgba(66, 68, 90, 1);}
 /* --------------------HEAD------ */
 
 .head {
@@ -252,6 +274,11 @@ body {
     font-size: 64px;
     line-height: 1.40;
     text-align: center;
+}
+.head-title:hover {
+    animation-name: changeFontColor;
+    animation-duration: 3500ms;
+    animation-iteration-count: infinite;
 }
 /* --------------------SESSIONS------------ */
 .grid-container {
@@ -323,7 +350,6 @@ body {
     background-color: var(--accent-colour);
 
     padding: 40px 45px;
-    /* margin-top: 137px; */
     margin-bottom: 97px;
     border-radius: 10px;
 
@@ -400,7 +426,7 @@ body {
     margin-bottom: 100px;
 }
 
-.splash-picture{
+.splash-picture {
     width: 526px;
     height: 100%;
     border-radius: 12px;
@@ -471,10 +497,24 @@ body {
     line-height: 140%;
 
     margin-bottom: 30px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in;
 }
 .service-item::before {
     margin-right: 20px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in;
 }
+.service-item:hover {
+    color: var(--accent-colour);
+}
+.service-item:hover::before {
+    background-color: var(--font-colour);
+}
+
 .service-price {
     font-family: 'El Messiri';
     font-weight: 700;
@@ -483,11 +523,9 @@ body {
 
     margin-left: auto;
 }
-
 .giftcard-box {
     flex-basis: calc((100% - 134px) / 2);
 }
-
 .giftcard-text {
     font-family: 'El Messiri';
     font-weight: 700;
@@ -560,6 +598,14 @@ body {
 .booking-time-btn {
     color: var(--accent-colour);
     background-color: var(--font-colour);}
+
+.booking-time-btn:hover {
+    box-shadow: none;
+}
+
+.booking-time-btn:active {
+    box-shadow: inset 11px 12px 30px -16px rgba(66, 68, 90, 1);
+}
 /* --------------------FOOTER------------ */
 .footer-fext {
     display: flex;
